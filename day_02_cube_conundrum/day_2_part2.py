@@ -29,11 +29,11 @@ def cube(file):
             games[game_id] = [sorted(red, reverse = True), sorted(green, reverse = True), sorted(blue, reverse = True)]
             game_id += 1
 
-    possible = []
+    power = []
     for id in games:
-        if games[id][0][0] <= max_red and games[id][1][0] <= max_green and games[id][2][0] <= max_blue:
-            possible.append(id)
-    return sum(possible)
+        power.append(games[id][0][0] * games[id][1][0] * games[id][2][0])
+
+    return sum(power)
 
 print(cube("day_2_part2.txt"))
 
