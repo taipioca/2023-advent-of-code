@@ -23,7 +23,6 @@ def replace(file):
                     words_pos[current.index(j)] = j               
             first_word = words_pos[min(words_pos)]
             current = current.replace(first_word, first_word[0] + str(words.index(first_word))+first_word[1:])
-        print(current)
         new.append(current)
 
     return new
@@ -33,7 +32,6 @@ def trebuchet(file):
     sum = 0
     for i in file:
         nums = [int(char) for char in i if char.isdigit()]
-        print(nums)
         sum += int(str(nums[0]) + str(nums[len(nums)-1]))
 
     return sum
