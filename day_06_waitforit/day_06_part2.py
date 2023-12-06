@@ -26,8 +26,6 @@ def wait(file):
             distances = distances + i
     times = int(times)
     distances = int(distances)
-    print(times)
-    print(distances)
 
     product = distance(times, distances)
 
