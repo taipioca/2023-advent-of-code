@@ -15,7 +15,7 @@ def gear(file):
     # cretae and clean up the new 2d array
     for line in schematic:
         split.append(list(line))
-    for line in range(len(split)-1):
+    for line in range(len(split)):
         split[line].insert(0, '.')
         split[line].pop(len(split[line])-1)
         split[line].append('.')
